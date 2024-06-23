@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l39b+&7l&lf-!_mk8g4sj0(ktx#%^*&p_qko8c_%)$e36!$-$z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-treggs1-cip4jcp-jz6isbg0xyb.ws-eu114.gitpod.io']
 
 
 # Application definition
@@ -122,3 +122,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io','https://*.127.0.0.1']
