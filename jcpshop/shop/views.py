@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 
 def product_list(request, category_slug=None):
+    """ A view to show all products, including sorting and search queries """
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
@@ -16,6 +17,7 @@ def product_list(request, category_slug=None):
                   'products': products})
 
 def product_detail(request, id, slug):
+    """ A view to show individual product details """
     product = get_object_or_404(Product,
                                 id-id,
                                 slug=slug,
